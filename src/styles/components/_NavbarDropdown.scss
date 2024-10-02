@@ -1,0 +1,99 @@
+.navbar-dropdown {
+  position: fixed;
+  top: 70px; // Ajustez cette valeur selon la hauteur de votre navbar
+  left: 35%;
+  right: 1.8%;
+  border-radius: 11px 10px 10px 11px;
+  display: flex;
+  background-color: #f5f1ea;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+  .dropdown-menu {
+    width: 35%;
+    background-color: #eae5db;
+    padding: 40px;
+    border-radius: 10px 0 0 10px;
+
+    .dropdown-item {
+      padding: 30px;
+      
+      cursor: pointer;
+
+      h3 {
+        color: #9c572c;
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      &.active {
+        background-color: #f5f1ea;
+        position: relative;
+        border-radius: 10px;
+
+        &::after {
+          content: '→';
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #9c572c;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .dropdown-content {
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .content-section {
+      h3 {
+        color: #9c572c;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .content-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 15px;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+          margin-right: 10px;
+        }
+
+        .item-content {
+          h4 {
+            color: #333;
+            font-size: 14px;
+            margin: 0 0 5px 0;
+          }
+
+          p {
+            color: #666;
+            font-size: 12px;
+            margin-right: 0;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
