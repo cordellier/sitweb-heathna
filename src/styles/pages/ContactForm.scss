@@ -1,0 +1,165 @@
+.contact-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: stretch;
+  z-index: 1000;
+}
+
+.contact-form-container {
+  width: 70%;
+  max-width: 1000px;
+  top: 95px;
+  right: 30px;
+  height: 87%;
+  background-color: $white-color;
+  overflow: hidden;
+  position: relative;
+  box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.contact-form-content {
+  display: flex;
+  height: 100%;
+}
+
+.contact-form-left {
+  width: 60%;
+  padding: $section-padding * 2;
+  background-color: $white-color;
+  overflow-y: auto;
+
+  h3 {
+    color: $primary-color;
+    font-size: $h4-size;
+    margin-bottom: $section-padding;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-of-type(1)::before {
+      background-image: url('path-to-mission-icon.svg');
+    }
+
+    &:nth-of-type(2)::before {
+      background-image: url('path-to-objectif-icon.svg');
+    }
+
+    &:nth-of-type(3)::before {
+      background-image: url('path-to-valeurs-icon.svg');
+    }
+  }
+
+  p {
+    margin-bottom: $section-padding * 1.5;
+    font-size: $body-size;
+    color: $secondary-color;
+    line-height: 1.5;
+  }
+
+  .contact-email {
+    margin-top: $section-padding * 2;
+    font-size: $small-size;
+    color: $gray-color;
+  }
+}
+
+.contact-form-right {
+  width: 80%;
+  padding: $section-padding * 2;
+  background-color: $primary-color;
+  color: $white-color;
+  overflow-y: auto;
+  border-radius: 0 10px 10px 0;
+
+  h2 {
+    font-size: $h3-size;
+    margin-bottom: $section-padding * 1.5;
+    text-align: center;
+    font-weight: $font-bold;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $section-padding;
+    margin-top: 60px;
+
+    .form-row {
+      display: flex;
+      gap: $section-padding;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: $section-padding / 2;
+      border: none;
+      border-radius: $border-radius / 2;
+      background-color: rgba($white-color, 0.2);
+      color: $white-color;
+      font-size: $body-size;
+      margin-bottom: 15px;
+
+      &::placeholder {
+        color: rgba($white-color, 0.7);
+      }
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      background-color: $white-color;
+      color: $primary-color;
+      border: none;
+      margin-right: 50%;
+      padding: $section-padding / 2;
+      border-radius: $border-radius / 2;
+      cursor: pointer;
+      font-weight: $font-bold;
+      font-size: $body-size;
+      text-transform: uppercase;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: darken($white-color, 10%);
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: $section-padding;
+  right: $section-padding;
+  background: none;
+  border: none;
+  font-size: $h2-size;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+  top: -2%;
+  left: 91%;
+
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}

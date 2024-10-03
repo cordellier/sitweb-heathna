@@ -1,22 +1,28 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarDropdown from './_NavbarDropdown';
+import ContactForm from '../pages/ContactForm';
 
 function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
   const dropdownRef = useRef(null);
   const timeoutRef = useRef(null);
 
   const handleMouseEnter = () => {
-    clearTimeout(timeoutRef.current); // Annuler tout timeout en cours
+    clearTimeout(timeoutRef.current);
     setShowDropdown(true);
   };
 
   const handleMouseLeave = () => {
-    // Définir un timeout pour masquer le dropdown
     timeoutRef.current = setTimeout(() => {
       setShowDropdown(false);
-    }, 200); // Vous pouvez ajuster cette durée
+    }, 200);
+  };
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setShowContactForm(true);
   };
 
   return (
@@ -24,7 +30,7 @@ function Navbar() {
       <div className="navbar-wrapper">
         <nav className="navbar">
           <div className="navbar__logo-container">
-            N
+            <Link to="/">N</Link>
           </div>
           <div className="navbar__container">
             <ul className="navbar__links">
@@ -47,11 +53,12 @@ function Navbar() {
               <li><Link to="/offre">Collaboration</Link></li>
               <li><Link to="/clients">Clients</Link></li>
               <li><Link to="/blog">Blog</Link></li>
+              <li><a href="#" onClick={handleContactClick} className="navbar__cta">CONTACTER NOUS</a></li>
             </ul>
-            <button className="navbar__cta">CONTACTER NOUS</button>
           </div>
         </nav>
       </div>
+      <ContactForm isOpen={showContactForm} onClose={() => setShowContactForm(false)} />
     </>
   );
 }

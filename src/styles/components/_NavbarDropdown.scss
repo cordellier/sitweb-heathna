@@ -1,6 +1,6 @@
 .navbar-dropdown {
   position: fixed;
-  top: 70px; // Ajustez cette valeur selon la hauteur de votre navbar
+  top: 100px; // Ajustez cette valeur selon la hauteur de votre navbar
   left: 35%;
   right: 1.8%;
   border-radius: 11px 10px 10px 11px;
@@ -40,8 +40,8 @@
         &::after {
           content: '→';
           position: absolute;
-          right: 15px;
-          top: 50%;
+          right: 10px;
+          top: 30%;
           transform: translateY(-50%);
           color: #9c572c;
           font-size: 24px;
