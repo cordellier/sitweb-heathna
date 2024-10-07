@@ -17,7 +17,7 @@ function Navbar() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setShowDropdown(false);
-    }, 200);
+    }, 300);
   };
 
   const handleContactClick = (e) => {

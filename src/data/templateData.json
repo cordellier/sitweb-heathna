@@ -1,0 +1,32 @@
+{
+    "templates": [
+      {
+        "id": 1,
+        "image": "/src/assets/img-template/cerf.jpg",
+        "title": "DESIGN SLIDER 1",
+        "topic": "ANIMAL",
+        "description": "Découvrez la majesté du cerf dans son habitat naturel. Cette image capture l'essence de la vie sauvage, mettant en valeur la beauté et la grâce de ces créatures fascinantes. Parfait pour les amoureux de la nature et les passionnés de photographie animalière."
+      },
+      {
+        "id": 2,
+        "image": "/src/assets/img-template/cerf2.jpg",
+        "title": "DESIGN SLIDER 2",
+        "topic": "NATURE",
+        "description": "Plongez dans la sérénité de la forêt avec cette magnifique scène. Le cerf, symbole de la nature sauvage, se fond harmonieusement dans son environnement. Cette image évoque la paix et la tranquillité, idéale pour créer une ambiance apaisante dans n'importe quel espace."
+      },
+      {
+        "id": 3,
+        "image": "/src/assets/img-template/elephant.jpg",
+        "title": "DESIGN SLIDER 3",
+        "topic": "WILDLIFE",
+        "description": "Admirez la grandeur de l'éléphant d'Afrique dans toute sa splendeur. Cette image captivante met en lumière l'intelligence et la force de ces géants paisibles. Un rappel puissant de l'importance de la conservation de la faune et de la protection des espèces menacées."
+      },
+      {
+        "id": 4,
+        "image": "/src/assets/img-template/leopard.jpg",
+        "title": "DESIGN SLIDER 4",
+        "topic": "FOREST",
+        "description": "Observez la grâce féline du léopard dans son habitat naturel. Cette image saisissante capture l'agilité et la beauté de ce prédateur insaisissable. Un témoignage visuel de l'adaptation parfaite de la nature, idéal pour les amateurs d'aventure et de vie sauvage."
+      }
+    ]
+  }

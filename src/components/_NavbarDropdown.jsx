@@ -1,21 +1,29 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import dropdownData from '../data/dropdownData.json';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import dropdownData from "../data/dropdownData.json";
 
 const NavbarDropdown = () => {
-  const [activeSection, setActiveSection] = useState('web');
+  const [activeSection, setActiveSection] = useState("web");
   const { sections, content } = dropdownData;
+  const navigate = useNavigate();
 
-  // Fonction pour faire défiler vers la section spécifiée
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  const handleItemClick = (item) => {
+    console.log("Item clicked:", item.title);  // Pour le débogage
+    if (item.title === "Template et Formation") {
+      navigate("/template-selection");
+    } else {
+      // Gérer les autres clics ici
+      const sectionId = item.title.replace(/\s+/g, "-").toLowerCase();
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="navbar-dropdown"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -25,16 +33,15 @@ const NavbarDropdown = () => {
         {sections.map((section) => (
           <div
             key={section.key}
-            className={`dropdown-item ${activeSection === section.key ? 'active' : ''}`}
+            className={`dropdown-item ${activeSection === section.key ? "active" : ""}`}
             onMouseEnter={() => setActiveSection(section.key)}
           >
             <h3>{section.title}</h3>
             <p>{section.description}</p>
-            {activeSection === section.key}
           </div>
         ))}
       </div>
-      <motion.div 
+      <motion.div
         className="dropdown-content"
         key={activeSection}
         initial={{ opacity: 0 }}
@@ -46,10 +53,10 @@ const NavbarDropdown = () => {
             <h3>{section.title}</h3>
             <div className="content-items">
               {section.items.map((item, itemIndex) => (
-                <div 
-                  key={itemIndex} 
-                  className="content-item" 
-                  onClick={() => scrollToSection(item.title.replace(/\s+/g, '-').toLowerCase())}
+                <div
+                  key={itemIndex}
+                  className="content-item"
+                  onClick={() => handleItemClick(item)}
                 >
                   <div className="icon">
                     <img src={item.icon} alt={`${item.title} Icon`} />

@@ -9,14 +9,20 @@
 @import 'base/base';
 
 // Layout
+@import './layout/CTAButton';
 
 
 // Pages
 @import './pages/ContactForm';
+@import './pages/BlogPage';
+@import './pages/ClientsPage';
+@import './pages/TemplateSelectionPage';
 
 // Components
 @import './components/Navbar';
 @import './components/NavbarDropdown';
+@import './components/HeaderClients';
+@import './components/CasClient';
 
 
 // Utilities

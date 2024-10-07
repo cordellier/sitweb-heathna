@@ -1,0 +1,32 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Pourquoi avoir un site internet ?",
+        "excerpt": "Découvrez les avantages d'avoir une présence en ligne pour votre entreprise.",
+        "category": "Conseils",
+        "image": "/src/assets/footer.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Les tendances du web design en 2023",
+        "excerpt": "Explorez les dernières tendances en matière de design web pour rester à la pointe.",
+        "category": "Actualités",
+        "image": "/src/assets/footer.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Comment optimiser son référencement naturel",
+        "excerpt": "Apprenez les techniques pour améliorer votre classement dans les moteurs de recherche.",
+        "category": "Conseils",
+        "image": "/src/assets/footer.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Étude de cas : Refonte du site web d'une startup",
+        "excerpt": "Découvrez comment nous avons aidé une startup à multiplier par 3 son trafic web.",
+        "category": "Étude de cas",
+        "image": "/src/assets/footer.jpg"
+      }
+    ]
+  }
