@@ -21,13 +21,13 @@ const ContactForm = ({ isOpen, onClose }) => {
             <button className="close-button" onClick={onClose}>&times;</button>
             <div className="contact-form-content">
               <div className="contact-form-left">
-                <h3>Notre Mission</h3>
+                <h4>Notre Mission</h4>
                 <p>Nous offrons des services de design exceptionnels adaptés à vos besoins uniques.</p>
                 
-                <h3>Notre Objectif</h3>
+                <h4>Notre Objectif</h4>
                 <p>Notre objectif est de vous accompagner dans l'évolution de votre entreprise, en garantissant une identité et une image propre.</p>
                 
-                <h3>Nos Valeurs</h3>
+                <h4>Nos Valeurs</h4>
                 <p>Notre objectif est de vous accompagner dans l'évolution de votre entreprise, en garantissant une identité et une image propre.</p>
                 
                 <p className="contact-email">contact@haethna.com</p>

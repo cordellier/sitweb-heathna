@@ -3,7 +3,7 @@ import Navbar from './components/_Navbar';
 import ContactForm from './pages/ContactForm';
 import BlogPage from './pages/BlogPage';
 import ClientsPage from './pages/ClientsPage';
-import TemplateSelectionPage from './pages/_TemplateSelectionPage'; // Importez le nouveau composant
+import TemplateSelectionPage from './pages/TemplateSelectionPage'; // Importez le nouveau composant
 import './styles/main.scss';
 
 function App() {

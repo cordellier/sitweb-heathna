@@ -1,24 +1,41 @@
 // _variables.scss
+@font-face {
+    font-family: 'Recoleta Bold';
+    src: url('/src/assets/font/Recoleta\ Alt\ Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Recoleta Regular';
+    src: url('/src/assets/font/Recoleta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 // Colors
-$primary-color: #f7d411;
-$secondary-color: #141414;
-$tertiary-color: #1ba339;
-$background-color: #E9E2D7;
-$gray-color: #949494;
-$white-color: #FDFDFD;
+$primary-color: #5F7BE3;
+$secondary-color: #EF4880;
+$color-accent-1: #00C9A7;        // Accent color 1
+$color-accent-2: #C4A8FF;        // Accent color 2 (Background)
+$color-accent-utility: #F7D411;  // Utility color (for highlights)
+$color-neutral-gray: #737680;    // Neutral gray color
+$color-neutral-white: #FFFFFF;   // Neutral white color
+$color-neutral-black: #333333;   // Neutral black color
 
 // Typography
-$font-primary: 'Angie Sans', sans-serif;
+$font-primary: 'Recoleta Bold', serif;
 $font-secondary: 'Lexend Deca', sans-serif;
+$font-tertiary: 'Recoleta Regular', serif;
 
 // Font sizes
-$h1-size: 44px;
-$h2-size: 36px;
-$h3-size: 28px;
-$h4-size: 22px;
-$body-size: 16px;
-$small-size: 15px;
+$h1-size: 72px;
+$h2-size: 58px;
+$h3-size: 42px;
+$h4-size: 20px;
+$body-size: 18px;
+$small-size: 16px;
+$small-size-2: 14px;
 
 // Font weights
 $font-bold: 700;
@@ -31,6 +48,6 @@ $desktop: 1024px;
 
 // Variables
 $section-padding: 20px;
-$border-radius: 14px;
+$border-radius: 10px;
 $title-color: #ffffff;
 $grid-gap: 20px;

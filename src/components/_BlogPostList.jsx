@@ -7,7 +7,7 @@ const BlogPostList = ({ posts }) => (
           <img src={post.image} alt={post.title} />
           <div className="post-content">
             <span className="tag">{post.category}</span>
-            <h3>{post.title}</h3>
+            <h4>{post.title}</h4>
           </div>
         </div>
       ))}

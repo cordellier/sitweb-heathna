@@ -2,20 +2,28 @@ body {
   font-family: $font-primary;
   font-size: $body-size;
   line-height: 1.5;
-  color: $primary-color;
-}
-
-h1, h2, h3, h4 {
-  font-family: $font-primary;
-  font-weight: $font-bold;
 }
 
 h1 {
+  color: $primary-color;
+  font-family: $font-primary;
+  font-weight: $font-bold;
   font-size: $h1-size;
 }
 
 h2 {
+  color: $secondary-color;
+  font-family: $font-primary;
+  font-weight: $font-bold;
   font-size: $h2-size;
+}
+
+
+p,
+a {
+  font-size: $body-size;
+  font-family: $font-secondary;
+  color: $color-neutral-black;
 }
 
 h3 {
@@ -23,6 +31,7 @@ h3 {
 }
 
 h4 {
+  font-family: $font-tertiary;
   font-size: $h4-size;
 }
 

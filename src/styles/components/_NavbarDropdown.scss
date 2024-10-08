@@ -5,13 +5,14 @@
   right: 1.8%;
   border-radius: 11px 10px 10px 11px;
   display: flex;
-  background-color: #f5f1ea;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: $color-neutral-white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   z-index: 999;
+  font-family: $font-secondary;
 
   .dropdown-menu {
     width: 35%;
-    background-color: $gray-color;
+    background-color: $primary-color;
     padding: 40px;
     border-radius: 10px 0 0 10px;
 
@@ -21,19 +22,19 @@
       cursor: pointer;
 
       h3 {
-        color: $primary-color;
+        color: $color-neutral-black;
         font-size: 18px;
         margin-bottom: 5px;
       }
 
       p {
-        color: #333;
+        color: $color-neutral-white;
         font-size: 14px;
         line-height: 1.4;
       }
 
       &.active {
-        background-color: #f5f1ea;
+        background-color: rgba($color-neutral-white, 0.4);
         position: relative;
         border-radius: 10px;
 
@@ -43,7 +44,7 @@
           right: 10px;
           top: 30%;
           transform: translateY(-50%);
-          color: $primary-color;
+          color: $color-neutral-black;
           font-size: 24px;
         }
       }
@@ -56,12 +57,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    font-family: $font-secondary;
 
     .content-section {
       h3 {
-        color: $primary-color;
+        color: $secondary-color;
         font-size: 16px;
         margin-bottom: 15px;
+        transition: color 0.3s ease;
       }
 
       .content-item {
@@ -71,10 +74,12 @@
         cursor: pointer;
         padding: 10px;
         border-radius: 5px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 
         &:hover {
-          background-color: rgba($primary-color, 0.1);
+          background-color: rgba($secondary-color, 0.1);
+          transform: translateY(-5px); // Légère élévation au survol
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); // Ajout d'une ombre
           border-radius: 10px;
         }
 
@@ -86,20 +91,24 @@
           justify-content: center;
           border-radius: 5px;
           margin-right: 10px;
+          transition: background-color 0.3s ease;
         }
 
         .item-content {
           h4 {
-            color: #333;
+            color: $color-neutral-black;
             font-size: 14px;
             margin: 0 0 5px 0;
+            font-family: $font-secondary;
+            transition: color 0.3s ease;
           }
 
           p {
-            color: #666;
+            color: $color-neutral-gray;
             font-size: 12px;
             margin-right: 0;
             line-height: 1.4;
+            transition: color 0.3s ease;
           }
         }
       }

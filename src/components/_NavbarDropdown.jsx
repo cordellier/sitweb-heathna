@@ -12,6 +12,11 @@ const NavbarDropdown = () => {
     console.log("Item clicked:", item.title);  // Pour le débogage
     if (item.title === "Template et Formation") {
       navigate("/template-selection");
+      // Fermer la dropdown
+      const dropdownElement = document.querySelector('.navbar-dropdown');
+      if (dropdownElement) {
+        dropdownElement.style.display = 'none';
+      }
     } else {
       // Gérer les autres clics ici
       const sectionId = item.title.replace(/\s+/g, "-").toLowerCase();
