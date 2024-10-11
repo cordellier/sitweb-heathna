@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import dropdownData from "../data/dropdownData.json";
@@ -9,21 +9,34 @@ const NavbarDropdown = () => {
   const navigate = useNavigate();
 
   const handleItemClick = (item) => {
-    console.log("Item clicked:", item.title);  // Pour le débogage
-    if (item.title === "Template et Formation") {
+    console.log("Item clicked:", item.title);
+
+    if (item.title === "Template CMS avec formation") {
+      console.log("Navigating to /template-selection");
       navigate("/template-selection");
-      // Fermer la dropdown
-      const dropdownElement = document.querySelector('.navbar-dropdown');
-      if (dropdownElement) {
-        dropdownElement.style.display = 'none';
-      }
+      closeDropdown();
+    } else if (
+      item.title === "Site Vitrine en 1 Semaine"
+    ) {
+      console.log("Navigating to /custom-website");
+      navigate("/custom-website");
+      closeDropdown();
     } else {
-      // Gérer les autres clics ici
+      console.log("Scrolling to section:", item.title);
       const sectionId = item.title.replace(/\s+/g, "-").toLowerCase();
       const section = document.getElementById(sectionId);
       if (section) {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        console.log("Section not found:", sectionId);
       }
+    }
+  };
+
+  const closeDropdown = () => {
+    const dropdownElement = document.querySelector('.navbar-dropdown');
+    if (dropdownElement) {
+      dropdownElement.style.display = 'none';
     }
   };
 

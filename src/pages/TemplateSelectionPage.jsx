@@ -1,55 +1,27 @@
 import { useState, useEffect, useRef } from 'react';
 import templateData from '../data/templateData.json';
+import InfosTemplate from '../components/TemplatePage/_InfosTemplate';
+import BesoinAide from '../components/Aide/_BesoinAide';
 
 const TemplateSelectionPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(null);
   const carouselRef = useRef(null);
   const timeRef = useRef(null);
-  const nextRef = useRef(null);
-  const prevRef = useRef(null);
 
   const { templates } = templateData;
 
   useEffect(() => {
     const carouselDom = carouselRef.current;
-    const nextDom = nextRef.current;
-    const prevDom = prevRef.current;
-    const timeDom = timeRef.current;
 
-    let timeRunning = 7000;
-    let timeAutoNext = 10000;
-
-    const showSlider = (type) => {
-      setDirection(type);
-      if (type === 'next') {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % templates.length);
-        carouselDom.classList.add('next');
-      } else {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + templates.length) % templates.length);
-        carouselDom.classList.add('prev');
-      }
-
-      // Reset time animation
-      timeDom.style.animation = 'none';
-      timeDom.offsetHeight; // Trigger reflow
-      timeDom.style.animation = null;
+    const showSlider = (index) => {
+      setCurrentIndex(index);
+      carouselDom.classList.add('changing');
 
       setTimeout(() => {
-        carouselDom.classList.remove('next', 'prev');
-      }, timeRunning);
+        carouselDom.classList.remove('changing');
+      }, 500);
     };
 
-    nextDom.onclick = () => showSlider('next');
-    prevDom.onclick = () => showSlider('prev');
-
-    const autoNextInterval = setInterval(() => {
-      showSlider('next');
-    }, timeAutoNext);
-
-    return () => {
-      clearInterval(autoNextInterval);
-    };
   }, [templates.length]);
 
   return (
@@ -67,13 +39,13 @@ const TemplateSelectionPage = () => {
             >
               <img src={template.image} alt={template.title} />
               <div className="content">
-                <div className="author">LUNDEV</div>
+                <div className="author">{template.author}</div>
                 <div className="title">{template.title}</div>
                 <div className="topic">{template.topic}</div>
                 <div className="des">{template.description}</div>
                 <div className="buttons">
-                  <button>SEE MORE</button>
-                  <button>SUBSCRIBE</button>
+                  <button>SAVOIR +</button>
+                  <button>COMMANDER</button>
                 </div>
               </div>
             </div>
@@ -85,6 +57,7 @@ const TemplateSelectionPage = () => {
             <div 
               key={template.id} 
               className={`item ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
             >
               <img src={template.image} alt={template.title} />
               <div className="content">
@@ -95,13 +68,10 @@ const TemplateSelectionPage = () => {
           ))}
         </div>
 
-        <div className="arrows">
-          <button id="prev" ref={prevRef}>&lt;</button>
-          <button id="next" ref={nextRef}>&gt;</button>
-        </div>
-
         <div className="time" ref={timeRef}></div>
       </div>
+      <InfosTemplate />
+      <BesoinAide pageId="template-selection" />
     </div>
   );
 };

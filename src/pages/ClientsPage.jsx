@@ -1,4 +1,3 @@
-import React from 'react';
 import HeaderClients from '../components/_HeaderClients';
 import CasClients from '../components/_CasClients';
 import CTAButton from '../layout/CTAButton';

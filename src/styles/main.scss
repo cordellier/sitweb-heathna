@@ -17,12 +17,15 @@
 @import './pages/BlogPage';
 @import './pages/ClientsPage';
 @import './pages/TemplateSelectionPage';
+@import './pages/WebSurMesure';
 
 // Components
 @import './components/Navbar';
 @import './components/NavbarDropdown';
 @import './components/HeaderClients';
 @import './components/CasClient';
+@import './components/TemplatePage/InfosTemplate';
+@import './components/Aide/BesoinAide';
 
 
 // Utilities

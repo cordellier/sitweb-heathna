@@ -1,0 +1,124 @@
+.custom-web-services {
+  background-color: $color-neutral-black;
+  color: $color-neutral-white;
+  font-family: $font-secondary;
+
+  .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(45deg, $primary-color, $secondary-color);
+    
+    h1 {
+      font-family: $font-primary;
+      font-size: $h1-size;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: $h3-size;
+      max-width: 600px;
+    }
+  }
+
+  .services {
+    padding: $section-padding;
+    background-color: $color-accent-2;
+
+    .service-card {
+      background-color: $color-neutral-white;
+      border-radius: $border-radius;
+      padding: 30px;
+      margin-bottom: $grid-gap;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h3 {
+        color: $primary-color;
+        font-family: $font-primary;
+        font-size: $h4-size;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: $color-neutral-gray;
+        font-size: $body-size;
+      }
+    }
+  }
+
+  .video-section {
+    padding: $section-padding;
+    text-align: center;
+
+    h2 {
+      font-family: $font-primary;
+      font-size: $h2-size;
+      margin-bottom: 30px;
+      color: $color-accent-1;
+    }
+
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .cta-section {
+    padding: $section-padding;
+    text-align: center;
+    background-color: $color-accent-utility;
+
+    h2 {
+      font-family: $font-primary;
+      font-size: $h2-size;
+      margin-bottom: 30px;
+      color: $color-neutral-black;
+    }
+
+    button {
+      background-color: $secondary-color;
+      color: $color-neutral-white;
+      border: none;
+      padding: 15px 30px;
+      font-size: $body-size;
+      font-weight: $font-bold;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .custom-web-services {
+    .hero {
+      h1 {
+        font-size: $h2-size;
+      }
+      p {
+        font-size: $h4-size;
+      }
+    }
+
+    .services, .video-section, .cta-section {
+      h2 {
+        font-size: $h3-size;
+      }
+    }
+  }
+}

@@ -23,7 +23,7 @@
         "items": [
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Template et Formation",
+            "title": "Template CMS avec formation",
             "description": "Création de template WordPress et formation à son utilisation."
           },
           {
@@ -48,14 +48,20 @@
         "items": [
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Site Vitrine Développé en 1 Semaine",
-            "description": "Développement rapide d'un site vitrine sur mesure en une semaine."
+            "title": "Site Express",
+            "description": "Développement express d'un site vitrine en une semaine, basé sur un template sélectionné et utilisant React.js."
           },
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Site Vitrine Développé Sur-Mesure",
+            "title": "Site Sur-Mesure",
             "description": "Développement d'un site vitrine entièrement personnalisé selon vos besoins."
+          },
+          {
+            "icon": "/src/assets/Icone.png",
+            "title": "Eco-conception",
+            "description": "Réduisez votre empreinte tout en restant à la pointe de la technologie avec des solutions web durables."
           }
+          
         ]
       },
       {

@@ -30,7 +30,7 @@ function Navbar() {
       <div className="navbar-wrapper">
         <nav className="navbar">
           <div className="navbar__logo-container">
-            <Link to="/">N</Link>
+            <Link to="/"><img src="/src/assets/logo/Logo Haethna _ 6.webp" alt="" /></Link>
           </div>
           <div className="navbar__container">
             <ul className="navbar__links">

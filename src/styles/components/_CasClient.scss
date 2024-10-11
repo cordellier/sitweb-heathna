@@ -1,11 +1,10 @@
 .cas-clients {
-    font-family: 'Poppins', sans-serif;
   
     h2 {
       text-align: center;
       padding: 2rem 0;
       font-size: 2rem;
-      color: #333;
+      color: $color-neutral-black;
     }
   
     .main {
@@ -29,7 +28,7 @@
       --bX: 50%;
       --bY: 80%;
       width: 100%;
-      background-color: #fff;
+      background-color: #FFFFFF;
       border-radius: 10px;
       transform: rotateX(var(--rX)) rotateY(var(--rY));
       transition: transform 0.2s;
