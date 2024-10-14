@@ -1,10 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
-import templateData from '../data/templateData.json';
-import InfosTemplate from '../components/TemplatePage/_InfosTemplate';
-import BesoinAide from '../components/Aide/_BesoinAide';
+import { useState, useEffect, useRef } from "react";
+import templateData from "../data/templateData.json";
+import InfosTemplate from "../components/TemplatePage/_InfosTemplate";
+import BesoinAide from "../components/Aide/_BesoinAide";
+import TemplateDetailsPopup from "../components/TemplatePage/_DetailsTemplate";
 
 const TemplateSelectionPage = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [openPosition, setOpenPosition] = useState({ x: 0, y: 0 });
   const carouselRef = useRef(null);
   const timeRef = useRef(null);
 
@@ -15,23 +18,31 @@ const TemplateSelectionPage = () => {
 
     const showSlider = (index) => {
       setCurrentIndex(index);
-      carouselDom.classList.add('changing');
+      carouselDom.classList.add("changing");
 
       setTimeout(() => {
-        carouselDom.classList.remove('changing');
+        carouselDom.classList.remove("changing");
       }, 500);
     };
-
   }, [templates.length]);
+
+  const handleOpenPopup = (event) => {
+    const rect = event.target.getBoundingClientRect();
+    setOpenPosition({ 
+      x: rect.left + rect.width / 2, 
+      y: rect.top + rect.height / 2 
+    });
+    setIsPopupOpen(true);
+  };
 
   return (
     <div className="template-selection-page">
       <div className="carousel" ref={carouselRef}>
         <div className="list">
           {templates.map((template, index) => (
-            <div 
-              key={template.id} 
-              className={`item ${index === currentIndex ? 'active' : ''}`}
+            <div
+              key={template.id}
+              className={`item ${index === currentIndex ? "active" : ""}`}
               style={{
                 zIndex: index === currentIndex ? 1 : 0,
                 opacity: index === currentIndex ? 1 : 0,
@@ -44,7 +55,7 @@ const TemplateSelectionPage = () => {
                 <div className="topic">{template.topic}</div>
                 <div className="des">{template.description}</div>
                 <div className="buttons">
-                  <button>SAVOIR +</button>
+                  <button onClick={handleOpenPopup}>SAVOIR +</button>
                   <button>COMMANDER</button>
                 </div>
               </div>
@@ -54,9 +65,9 @@ const TemplateSelectionPage = () => {
 
         <div className="thumbnail">
           {templates.map((template, index) => (
-            <div 
-              key={template.id} 
-              className={`item ${index === currentIndex ? 'active' : ''}`}
+            <div
+              key={template.id}
+              className={`item ${index === currentIndex ? "active" : ""}`}
               onClick={() => setCurrentIndex(index)}
             >
               <img src={template.image} alt={template.title} />
@@ -72,6 +83,12 @@ const TemplateSelectionPage = () => {
       </div>
       <InfosTemplate />
       <BesoinAide pageId="template-selection" />
+      <TemplateDetailsPopup
+        isOpen={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+        template={templates[currentIndex]}
+        openPosition={openPosition}
+      />
     </div>
   );
 };

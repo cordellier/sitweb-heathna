@@ -1,0 +1,79 @@
+{
+    "tabs": [
+      {
+        "title": "LES PAGES INCLUSES",
+        "contentTitle": "Les pages incluses dans le thème",
+        "content": "Contenu détaillé des pages incluses..."
+      },
+      {
+        "title": "100% PERSONNALISABLE",
+        "contentTitle": "Options de personnalisation",
+        "content": "Pas besoin de savoir coder pour transformer votre site, si vous êtes un minimum à l’aise avec l’outil informatique et que vous êtes créatif, vous risquez certainement de prendre plaisir à personnaliser votre thème.<br><br>Les thèmes sont construits sur WordPress avec le constructeur de page Divi qui est simple à prendre en main et intuitif. En suivant les vidéos de formation vous prendrez l’outil en main en un rien de temps !<br><br>Pour créer le site internet qui vous convient à 100% ! Le thème Bahia est un modèle de site web qui est totalement personnalisable ! Il est vendu avec une formation en ligne qui vous accompagne du début à la fin de la création de votre site internet.<br><br>En regardant les vidéos vous serez capable de modifier et personnaliser : le logo, les couleurs, les textes, les images mais aussi d’ajouter ou de supprimer des colonnes, créer de nouvelles pages etc.<br><br>Les templates créés, sont conçus pour évoluer au même rythme que votre entreprise : vous démarrez avec toutes les pages de la démo et vous pourrez ensuite dupliquer/ajouter des pages, ajouter de nouvelles fonctionnalités, un blog… Ainsi, votre site s’adapte à vos besoins !<br><br>De plus, le thème a été conçu stratégiquement pour convertir votre client idéal et s’adapter à votre domaine d’activité. Vous vous sentirez libre dans la personnalisation afin de créer un site qui vous corresponde et qui attire votre clientèle cible ! Laissez libre cours à votre créativité !"
+    }
+    
+    ,
+      {
+        "title": "AVANT / APRÈS",
+        "contentTitle": "Exemples de transformations",
+        "content": "Galerie d'exemples avant/après..."
+      },
+      {
+        "title": "UNE OFFRE COMPLÈTE",
+        "contentTitle": "Ce que comprend notre offre",
+        "content": "Détails de l'offre complète..."
+      },
+      {
+        "title": "FORMATION",
+        "contentTitle": "Notre programme de formation",
+        "content": "Description du programme de formation..."
+      },
+      {
+        "title": "TARIFS",
+        "contentTitle": "Choisissez votre option",
+        "pricingOptions": [
+          {
+            "title": "PAIEMENT UNIQUE",
+            "price": "697€",
+            "features": [
+              "Template de site complet",
+              "Accès à la formation",
+              "Accès aux bonus",
+              "Support en ligne de 3 mois"
+            ],
+            "notIncluded": [
+              "1h d'accompagnement visio",
+              "Audit & vérifications finales"
+            ]
+          },
+          {
+            "title": "PAIEMENT EN 2 OU 3X",
+            "price": "240€",
+            "priceNote": "x3",
+            "isBestOption": true,
+            "features": [
+              "Template de site complet",
+              "Accès à la formation",
+              "Accès aux bonus",
+              "Support en ligne de 3 mois"
+            ],
+            "notIncluded": [
+              "1h d'accompagnement visio",
+              "Audit & vérifications finales"
+            ]
+          },
+          {
+            "title": "AVEC ACCOMPAGNEMENT",
+            "price": "897€",
+            "features": [
+              "Template de site complet",
+              "Accès à la formation",
+              "Accès aux bonus",
+              "Support en ligne de 3 mois",
+              "1h d'accompagnement visio",
+              "Audit & vérifications finales"
+            ]
+          }
+        ]
+      }
+    ]
+  }

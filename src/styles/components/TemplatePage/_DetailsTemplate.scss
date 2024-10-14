@@ -1,0 +1,155 @@
+.template-details-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color-neutral-black, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+.template-details-popup.hipolite {
+  background-color: $color-neutral-white;
+  border-radius: $border-radius;
+  width: 90%;
+  max-width: 1400px;
+  height: 80vh;
+  box-shadow: 0 10px 30px rgba($color-neutral-black, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: popupGrow 0.3s ease-out;
+
+  .close-button {
+    position: absolute;
+    top: 90px;
+    left: 76%;
+    font-size: $h3-size;
+    color: $color-neutral-gray;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .popup-title {
+    font-family: $font-primary;
+    font-size: $h1-size;
+    color: $primary-color;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .popup-content {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .tab-navigation {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: $section-padding;
+    margin-top: 80px;
+  }
+
+  .tab-button {
+    font-family: $font-secondary;
+    font-size: $small-size-2;
+    color: $color-neutral-black;
+    background-color: $color-neutral-white;
+    padding: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: $border-radius;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+  
+    &:hover {
+      background-color: $color-neutral-gray;
+      color: $color-neutral-white;
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+  
+    &.active {
+      background-color: $color-neutral-black;
+      color: $color-neutral-white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+
+  .tab-content {
+    flex-grow: 1;
+    padding: $section-padding;
+    overflow-y: auto;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .content-title {
+    font-family: $font-primary;
+    font-size: $h3-size;
+    color: $secondary-color;
+    margin-bottom: $section-padding;
+    margin-top: 20px;
+  }
+
+  .content-area {
+    font-family: $font-tertiary;
+    font-size: $body-size;
+    color: $color-neutral-black;
+    line-height: 1.6;
+  }
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popupGrow {
+  from { 
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: $tablet) {
+  .template-details-popup.hipolite {
+    .popup-content {
+      flex-direction: column;
+    }
+
+    .tab-navigation {
+      width: 100%;
+      flex-direction: row;
+      overflow-x: auto;
+      padding: $section-padding 0;
+    }
+
+    .tab-button {
+      white-space: nowrap;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+}
