@@ -58,14 +58,17 @@
     }
 
     .model {
-      width: 40%;
+      width: 45%;
       height: 30vh;
       position: absolute;
       bottom: 250px;
       z-index: 1;
+      text-transform: uppercase;
 
       h1{
-        margin-bottom: 40px;
+        font-family: $font-primary;
+        font-size: $h2-size;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
       }
     }
   }

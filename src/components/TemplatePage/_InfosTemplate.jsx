@@ -42,7 +42,7 @@ const InfosTemplate = () => {
             <li>Adaptés à tous les appareils</li>
             <li>Formation complète incluse</li>
           </ul>
-          <button className="cta">ça m'intéresse</button>
+          <button className="cta">Mon template</button>
         </div>
       </div>
     </>

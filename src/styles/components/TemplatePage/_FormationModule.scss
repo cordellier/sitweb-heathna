@@ -1,0 +1,97 @@
+.formation-module-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: $color-neutral-white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+    .module-card {
+      background: $color-neutral-white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+  
+      &:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+  
+      .module-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        background: $color-neutral-white;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        text-align: left;
+        transition: background-color 0.3s ease;
+  
+        .module-title-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+  
+        .module-number {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: $color-neutral-white;
+          background: $color-accent-1;
+          padding: 0.3rem 0.7rem;
+          border-radius: 20px;
+          letter-spacing: 2px;
+        }
+  
+        .module-title {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #1e293b;
+          margin: 0;
+        }
+  
+        .toggle-icon {
+          color: #64748b;
+        }
+      }
+  
+      .module-content {
+        padding: 0 1.5rem 1.5rem;
+  
+        .module-description {
+          color: #475569;
+          margin-bottom: 1rem;
+          line-height: 1.6;
+        }
+  
+        .module-list {
+          list-style-type: none;
+          padding-left: 0;
+  
+          li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #334155;
+  
+            &::before {
+              content: "•";
+              color: #3b82f6;
+              position: absolute;
+              left: 0;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .formation-module-grid {
+      padding: 1rem;
+    }
+  }

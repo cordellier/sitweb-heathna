@@ -12,6 +12,11 @@
   animation: popupFadeIn 0.3s ease-out;
 }
 
+.template-details-popup.hipolite .tab-content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 .template-details-popup.hipolite {
   background-color: $color-neutral-white;
   border-radius: $border-radius;
@@ -23,11 +28,12 @@
   flex-direction: column;
   overflow: hidden;
   animation: popupGrow 0.3s ease-out;
+  
 
   .close-button {
     position: absolute;
-    top: 90px;
-    left: 76%;
+    top: 80px;
+    left: 77%;
     font-size: $h3-size;
     color: $color-neutral-gray;
     background: none;
@@ -41,14 +47,6 @@
     }
   }
 
-  .popup-title {
-    font-family: $font-primary;
-    font-size: $h1-size;
-    color: $primary-color;
-    text-align: center;
-    margin: 20px 0;
-  }
-
   .popup-content {
     display: flex;
     flex-grow: 1;
@@ -58,7 +56,7 @@
   .tab-navigation {
     display: flex;
     flex-direction: column;
-    width: 250px;
+    width: 15%;
     padding: $section-padding;
     margin-top: 80px;
   }
@@ -90,7 +88,6 @@
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
   }
-  
 
   .tab-content {
     flex-grow: 1;
@@ -103,7 +100,7 @@
 
   .content-title {
     font-family: $font-primary;
-    font-size: $h3-size;
+    font-size: $h2-size;
     color: $secondary-color;
     margin-bottom: $section-padding;
     margin-top: 20px;
@@ -114,6 +111,42 @@
     font-size: $body-size;
     color: $color-neutral-black;
     line-height: 1.6;
+
+    .personalisable-content,
+    .offer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+
+      .content-item {
+        margin-bottom: 5px;
+
+        h3 {
+          font-family: $font-secondary;
+          font-size: $h4-size;
+          color: $color-neutral-black;
+          margin-bottom: 5px;
+          display: flex;
+
+          .emoji {
+            margin-right: 10px;
+            font-size: 1.2em;
+          }
+        }
+
+        p {
+          font-family: $font-secondary;
+          font-size: $small-size;
+          color: $color-neutral-gray;
+        }
+      }
+    }
+
+    .personalisable-footer {
+      color: $color-accent-1;
+      font-family: $font-secondary;
+      font-size: $small-size;
+    }
   }
 }
 
@@ -150,6 +183,13 @@
       white-space: nowrap;
       margin-right: 10px;
       margin-bottom: 0;
+    }
+
+    .content-area {
+      .personalisable-content,
+      .offer-content {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }
