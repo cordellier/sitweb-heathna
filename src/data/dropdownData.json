@@ -9,11 +9,6 @@
       "key": "graphisme",
       "title": "Graphisme",
       "description": "Votre entreprise n'a pas encore sa Direction artistique ? pas de panique, nous collaborerons ensemble pour y parvenir !"
-    },
-    {
-      "key": "edition",
-      "title": "Édition",
-      "description": "Vous souhaitez publier un ouvrage ? Peu importe ce que vous souhaitez publier, nous vous accompagnons durant ce projet."
     }
   ],
   "content": {
@@ -33,13 +28,8 @@
           },
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Site Vitrine Sur-Mesure",
+            "title": "Site Sur-Mesure",
             "description": "Création d'un site vitrine WordPress personnalisé selon vos besoins."
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Site E-commerce",
-            "description": "Création de site e-commerce WordPress avec WooCommerce."
           }
         ]
       },
@@ -62,16 +52,6 @@
             "description": "Réduisez votre empreinte tout en restant à la pointe de la technologie avec des solutions web durables."
           }
           
-        ]
-      },
-      {
-        "title": "PACK IDENTITÉ VISUELLE COMPLÈTE",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Packs Tout Compris",
-            "description": "Pack complet incluant design, développement et identité visuelle."
-          }
         ]
       }
     ],
@@ -103,78 +83,6 @@
             "icon": "/src/assets/Icone.png",
             "title": "Flyer - Dépliant",
             "description": "Création de flyers et dépliants percutants pour votre communication."
-          }
-        ]
-      },
-      {
-        "title": "PACKS IDENTITÉ VISUELLE ET PAPETERIE",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Packs Brandboard et Carte",
-            "description": "Pack incluant un brandboard et la création de cartes de visite."
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Packs Charte et Carte",
-            "description": "Pack comprenant une charte graphique et des cartes de visite assorties."
-          }
-        ]
-      }
-    ],
-    "edition": [
-      {
-        "title": "PÔLE ÉDITION",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Mise en Page Simple d'un Manuscrit",
-            "description": "Mise en page de l'intérieur du livre selon les normes de mise en page pour l'édition. Livre comportant du texte."
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Mise en Page Complexe d'un Manuscrit",
-            "description": "Mise en page de l'intérieur du livre selon les normes de mise en page pour l'édition. Livre comportant du texte et des images."
-          }
-        ]
-      },
-      {
-        "title": "PÔLE DESIGN DES COUVERTURES",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Création de Couvertures",
-            "description": "Conception de couverture à partir des éléments que vous fournissez (informations, image, etc.)"
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Création et Recherche Iconographique",
-            "description": "Recherche et conception de couverture personnalisée selon vos besoins."
-          }
-        ]
-      },
-      {
-        "title": "PÔLE ACCOMPAGNEMENT",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Accompagnement à l'Autoédition",
-            "description": "Vous souhaitez publier votre livre en auto-édition ? Nous vous accompagnons pas à pas dans sa publication."
-          }
-        ]
-      },
-      {
-        "title": "PACKS ÉDITION",
-        "items": [
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Packs Édition et Design",
-            "description": "Idéal pour les personnes souhaitant combiner la mise en page et création de couverture."
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Packs Tout Compris",
-            "description": "Idéal pour les personnes souhaitant auto-publier en liant la mise en page et la création de couverture."
           }
         ]
       }

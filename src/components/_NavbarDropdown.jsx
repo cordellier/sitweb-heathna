@@ -12,13 +12,11 @@ const NavbarDropdown = () => {
     console.log("Item clicked:", item.title);
 
     if (item.title === "Template CMS avec formation") {
-      console.log("Navigating to /template-selection");
       navigate("/template-selection");
       closeDropdown();
     } else if (
       item.title === "Site Vitrine en 1 Semaine"
     ) {
-      console.log("Navigating to /custom-website");
       navigate("/custom-website");
       closeDropdown();
     } else {

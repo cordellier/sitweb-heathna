@@ -94,7 +94,7 @@
       },
       {
         "title": "FORMATION",
-        "contentTitle": "Ce que contient la formation",
+        "contentTitle": "Ce que contient la formation.",
         "modules": [
           {
             "number": 1,
@@ -196,7 +196,7 @@
       },
       {
         "title": "TARIFS",
-        "contentTitle": "Choisissez votre option",
+        "contentTitle": "Choisissez votre option.",
         "pricingOptions": [
           {
             "title": "PAIEMENT UNIQUE",

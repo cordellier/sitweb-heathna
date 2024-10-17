@@ -17,7 +17,9 @@
 @import './pages/BlogPage';
 @import './pages/ClientsPage';
 @import './pages/TemplateSelectionPage';
-@import './pages/WebSurMesure';
+@import './pages/OneWeekTemplate';
+// Pages HomePage
+@import './pages/Accueil/HomePage';
 
 // Components
 @import './components/Navbar';
@@ -26,6 +28,7 @@
 @import './components/CasClient';
 @import './components/TemplatePage/InfosTemplate';
 @import './components/Aide/BesoinAide';
+// Components Template
 @import './components/TemplatePage/DetailsTemplate';
 @import './components/TemplatePage/PricingOptions';
 @import './components/TemplatePage/FormationModule';

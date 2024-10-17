@@ -54,6 +54,7 @@
         text-orientation: mixed;
         transform: rotate(180deg);
         margin-top: 10px;
+        font-size: $small-size-2;
       }
     }
   
@@ -82,18 +83,20 @@
         margin-bottom: 15px;
         color: #555;
         font-family: $font-secondary;
+        font-size: $body-size;
       }
   
       ul {
         list-style-type: none;
         padding-left: 0;
         margin-bottom: 20px;
+        font-size: 12px;
   
         li {
           margin-bottom: 10px;
           padding-left: 20px;
           position: relative;
-          color: #555;
+          color: $color-neutral-black;
           font-family: $font-secondary;
   
           &:before {
@@ -120,6 +123,7 @@
         cursor: pointer;
         border-radius: 10px;
         transition: background-color 0.4s ease, color 0.4s ease, transform 0.3s ease;
+        font-size: 12px;
   
         &:hover {
           background-color: $color-accent-1;

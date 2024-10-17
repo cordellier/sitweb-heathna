@@ -68,7 +68,8 @@
       h1{
         font-family: $font-primary;
         font-size: $h2-size;
-        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        text-shadow: 0 12px 10px rgba(0, 0, 0, 0.4);
+        line-height: 1.3;
       }
     }
   }
