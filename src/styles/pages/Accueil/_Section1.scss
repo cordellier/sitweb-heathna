@@ -1,0 +1,106 @@
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  gap: 40px;
+  padding: 200px;
+  align-items: center;
+  background: #F8F9FF;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: $border-radius;
+    overflow: hidden;
+    background: $color-neutral-black;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        color: $color-neutral-black;
+      }
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    h1 {
+      font-family: $font-primary;
+      font-size: $h1-size;
+      line-height: 1.2;
+      margin: 0;
+      color: $color-neutral-black;
+
+      @media (max-width: $tablet) {
+        font-size: $h2-size;
+      }
+
+      .animated-word {
+        display: inline-block;
+        transition: all 0.5s ease;
+        
+        &.fade-out {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        
+        &.fade-in {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    .cta-button {
+      background-color: $color-accent-utility;
+      color: $color-neutral-black;
+      font-family: $font-secondary;
+      font-size: $body-size;
+      padding: 15px 30px;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

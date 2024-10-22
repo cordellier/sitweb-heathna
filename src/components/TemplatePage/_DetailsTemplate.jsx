@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import templateDetails from "../../data/templateDetails.json";
 import PricingOptions from "../TemplatePage/_PricingOption";
 import FormationModuleGrid from '../TemplatePage/_FormationModule';
 
@@ -7,7 +6,7 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
   const [activeTab, setActiveTab] = useState(0);
   const popupRef = useRef(null);
 
-  const { tabs } = templateDetails;
+  const { tabs } = template;  // Modification ici pour utiliser les props
 
   useEffect(() => {
     if (isOpen && popupRef.current && openPosition) {
@@ -55,7 +54,6 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
     } else if (activeTab === 4) { // FORMATION
       return <FormationModuleGrid modules={tab.modules} />;
     }
-    // Pour les autres onglets, utilisez le rendu HTML si le contenu n'est pas un tableau
     return <div dangerouslySetInnerHTML={{ __html: tab.content }} />;
   };
   

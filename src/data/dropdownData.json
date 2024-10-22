@@ -14,7 +14,7 @@
   "content": {
     "web": [
       {
-        "title": "PÔLE WORDPRESS",
+        "title": "PÔLE DÉVELOPPEMENT",
         "items": [
           {
             "icon": "/src/assets/Icone.png",
@@ -34,21 +34,16 @@
         ]
       },
       {
-        "title": "PÔLE DÉVELOPPEMENT",
+        "title": "PÔLE ÉCO-CONCEPTION",
         "items": [
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Site Express",
-            "description": "Développement express d'un site vitrine en une semaine, basé sur un template sélectionné et utilisant React.js."
+            "title": "Site Durable en 1 semaine",
+            "description": "Réduisez votre empreinte tout en restant à la pointe de la technologie avec des solutions web durables."
           },
           {
             "icon": "/src/assets/Icone.png",
-            "title": "Site Sur-Mesure",
-            "description": "Développement d'un site vitrine entièrement personnalisé selon vos besoins."
-          },
-          {
-            "icon": "/src/assets/Icone.png",
-            "title": "Eco-conception",
+            "title": "Site Web Durable Sur-Mesure",
             "description": "Réduisez votre empreinte tout en restant à la pointe de la technologie avec des solutions web durables."
           }
           

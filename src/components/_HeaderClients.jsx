@@ -1,16 +1,9 @@
-import React from "react";
-import CTAButton from "../layout/CTAButton";
+// src/components/HeaderClients.js
+import useRenardImages from '../hooks/useTemplatesImages';
+import { HEADER_CLIENTS_TITLE, HEADER_CLIENTS_SUBTITLE } from '../Constants/headerClientsText';
 
 const HeaderClients = () => {
-  // Importez toutes les images du dossier renard
-  const renardImages = import.meta.glob('/src/assets/renard/*.{png,jpg,jpeg,gif,svg}', { eager: true });
-
-  // Convertissez l'objet d'importation en tableau d'URLs
-  const imageUrls = Object.values(renardImages).map(module => module.default);
-
-  const handleCTAClick = () => {
-    console.log('CTA clicked!');
-  };
+  const imageUrls = useRenardImages();
 
   return (
     <div className="banner">
@@ -26,13 +19,11 @@ const HeaderClients = () => {
         ))}
       </div>
       <div className="content">
-        <div className="author">
-        </div>
+        <div className="author"></div>
         <div className="model">
-          <h1>Quelques-uns de nos plus beaux succès clients</h1>
-          <h2></h2>
-          </div>
-
+          <h1>{HEADER_CLIENTS_TITLE}</h1>
+          <h2>{HEADER_CLIENTS_SUBTITLE}</h2>
+        </div>
       </div>
     </div>
   );

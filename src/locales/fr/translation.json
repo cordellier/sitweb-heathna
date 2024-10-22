@@ -1,0 +1,141 @@
+{
+  "data": {
+    "homePage": {
+      "title": "Studio",
+      "subtitle": "de communication créative",
+      "name": "Haethna",
+      "sections": {
+        "hero": {
+          "title": "Nous créons des",
+          "authentiques": "authentiques",
+          "rotatingWords": ["histoires", "identités", "sites web", "stratégies"],
+          "ctaButton": "En savoir plus"
+        },
+        "creative": {
+          "words": {
+            "creativity": "Créativité",
+            "strategy": "Stratégie",
+            "innovation": "Innovation"
+          },
+          "subtitle": "C'est ce que nous mettons en place pour sublimer votre identité"
+        },
+        "technology": {
+          "title": "Technologie et créativité",
+          "subtitle": "Les outils qui soutiennent notre expertise",
+          "tools": [
+            { "id": "ai", "name": "Illustrator" },
+            { "id": "ps", "name": "Photoshop" },
+            { "id": "id", "name": "InDesign" },
+            { "id": "pr", "name": "Premiere Pro" },
+            { "id": "js", "name": "JavaScript" },
+            { "id": "react", "name": "React" },
+            { "id": "wp", "name": "WordPress" }
+          ]
+        },
+        "expertise": {
+          "title": "Plongez plus loin dans nos expertises",
+          "subtitle": "Découvrez les différents pôles que nous vous proposons pour construire votre histoire",
+          "cards": [
+            {
+              "title": "Site WordPress",
+              "link": "#wordpress"
+            },
+            {
+              "title": "Site E-commerce",
+              "link": "#ecommerce"
+            },
+            {
+              "title": "Identité Visuelle",
+              "link": "#identite"
+            }
+          ]
+        },
+        "testimonials": {
+          "cases": [
+            {
+              "id": 1,
+              "title": "Laforge Arnaud",
+              "description": "« Manon réalise un travail de qualité, effectué avec minutie et précision. Tout a un sens dans ses propositions. Je recommande vivement. »",
+              "color": "#2B3990"
+            },
+            {
+              "id": 2,
+              "title": "Dubois Christian",
+              "description": "« Manon est une excellente professionnelle à l'écoute de son client. Réponse parfaitement adaptée au besoin. Qualité de travail irréprochable. Rapidité et précision d'exécution. »",
+              "color": "#E5A397"
+            },
+            {
+              "id": 3,
+              "title": "Martin Adeline",
+              "description": "Manon est géniale ! Elle peut être fière de son oeuvre, car je le suis.",
+              "color": "#4A7B3F"
+            }
+          ]
+        }
+      }
+    },
+    "sections": {
+      "sectionOne": {
+        "title": "Section 1 Title",
+        "description": "Description for Section 1"
+      },
+      "sectionTwo": {
+        "title": "Section 2 Title",
+        "description": "Description for Section 2"
+      },
+      "sectionThree": {
+        "title": "Section 3 Title",
+        "description": "Description for Section 3"
+      },
+      "sectionFour": {
+        "title": "Section 4 Title",
+        "description": "Description for Section 4"
+      },
+      "sectionFive": {
+        "title": "Section 5 Title",
+        "description": "Description for Section 5"
+      }
+    },
+    "header": {
+      "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "services": "Services",
+        "contact": "Contact"
+      }
+    },
+    "footer": {
+      "brand": {
+        "tagline": "Studio de communication créative"
+      },
+      "about": {
+        "title": "À PROPOS",
+        "concept": "Concept",
+        "whoWeAre": "Qui sommes-nous ?",
+        "faq": "FAQ",
+        "jobs": "Offres d'emploi",
+        "internships": "Offres de stage"
+      },
+      "meetUs": {
+        "title": "NOUS RENCONTRER",
+        "recruiters": "Recruteurs",
+        "blog": "Blog",
+        "jobs": "Jobs",
+        "contact": "Contact"
+      },
+      "newsletter": {
+        "title": "LA NEWSLETTER QUI FAIT LE TAF",
+        "description": "Deux fois par semaine, des histoires, des jobs et des conseils dans votre boîte mail.",
+        "placeholder": "Email",
+        "button": "Abonnez-vous !",
+        "disclaimer": "Vous pouvez vous désabonner à tout moment. On n'est pas susceptibles, promis. Pour en savoir plus sur notre politique de protection des données,",
+        "privacyLink": "cliquez-ici"
+      },
+      "legal": {
+        "mentions": "Mentions légales",
+        "terms": "CGU",
+        "privacy": "Politique de confidentialité"
+      }
+    }
+  }
+}

@@ -20,6 +20,11 @@
 @import './pages/OneWeekTemplate';
 // Pages HomePage
 @import './pages/Accueil/HomePage';
+@import './pages/Accueil/Section1';
+@import './pages/Accueil/Section2';
+@import './pages/Accueil/Section3';
+@import './pages/Accueil/Section4';
+@import './pages/Accueil/Section5';
 
 // Components
 @import './components/Navbar';
@@ -28,6 +33,7 @@
 @import './components/CasClient';
 @import './components/TemplatePage/InfosTemplate';
 @import './components/Aide/BesoinAide';
+@import './components/Footer';
 // Components Template
 @import './components/TemplatePage/DetailsTemplate';
 @import './components/TemplatePage/PricingOptions';

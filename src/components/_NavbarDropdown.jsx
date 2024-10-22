@@ -1,56 +1,28 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import dropdownData from "../data/dropdownData.json";
+// src/components/NavbarDropdown.js
+import { motion } from 'framer-motion';
+import dropdownData from '../data/dropdownData.json';
+import useActiveSection from '../hooks/useActiveSection';
+import useDropdownNavigation from '../hooks/useDropdownNavigation';
+import { NAVBAR_DROPDOWN_ANIMATION, DROPDOWN_CONTENT_ANIMATION } from '../constants/animationSettings';
 
 const NavbarDropdown = () => {
-  const [activeSection, setActiveSection] = useState("web");
+  const { activeSection, handleMouseEnter } = useActiveSection();
+  const { handleItemClick } = useDropdownNavigation();
   const { sections, content } = dropdownData;
-  const navigate = useNavigate();
-
-  const handleItemClick = (item) => {
-    console.log("Item clicked:", item.title);
-
-    if (item.title === "Template CMS avec formation") {
-      navigate("/template-selection");
-      closeDropdown();
-    } else if (
-      item.title === "Site Vitrine en 1 Semaine"
-    ) {
-      navigate("/custom-website");
-      closeDropdown();
-    } else {
-      console.log("Scrolling to section:", item.title);
-      const sectionId = item.title.replace(/\s+/g, "-").toLowerCase();
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        console.log("Section not found:", sectionId);
-      }
-    }
-  };
-
-  const closeDropdown = () => {
-    const dropdownElement = document.querySelector('.navbar-dropdown');
-    if (dropdownElement) {
-      dropdownElement.style.display = 'none';
-    }
-  };
 
   return (
     <motion.div
       className="navbar-dropdown"
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      initial={NAVBAR_DROPDOWN_ANIMATION.initial}
+      animate={NAVBAR_DROPDOWN_ANIMATION.animate}
+      transition={NAVBAR_DROPDOWN_ANIMATION.transition}
     >
       <div className="dropdown-menu">
         {sections.map((section) => (
           <div
             key={section.key}
             className={`dropdown-item ${activeSection === section.key ? "active" : ""}`}
-            onMouseEnter={() => setActiveSection(section.key)}
+            onMouseEnter={() => handleMouseEnter(section.key)}
           >
             <h3>{section.title}</h3>
             <p>{section.description}</p>
@@ -60,9 +32,9 @@ const NavbarDropdown = () => {
       <motion.div
         className="dropdown-content"
         key={activeSection}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
+        initial={DROPDOWN_CONTENT_ANIMATION.initial}
+        animate={DROPDOWN_CONTENT_ANIMATION.animate}
+        transition={DROPDOWN_CONTENT_ANIMATION.transition}
       >
         {content[activeSection]?.map((section, index) => (
           <div key={index} className="content-section">

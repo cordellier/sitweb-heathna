@@ -2,6 +2,7 @@ import HeaderClients from '../components/_HeaderClients';
 import CasClients from '../components/_CasClients';
 import CTAButton from '../layout/CTAButton';
 import { FaLaptopCode, FaPaintBrush, FaBook } from 'react-icons/fa';
+import Footer from '../components/_Footer';
 
 const handleCTAClick = () => {
   console.log('CTA clicked!');
@@ -9,6 +10,7 @@ const handleCTAClick = () => {
 
 const ClientsPage = () => {
   return (
+    <>
     <div className="clients-page">
       <HeaderClients />
       
@@ -32,6 +34,8 @@ const ClientsPage = () => {
         </section>
       </main>
     </div>
+    <Footer />
+    </>
   );
 };
 

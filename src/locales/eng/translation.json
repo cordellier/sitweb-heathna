@@ -1,0 +1,141 @@
+{
+  "data": {
+    "homePage": {
+      "title": "Studio",
+      "subtitle": "creative communication",
+      "name": "Haethna",
+      "sections": {
+        "hero": {
+          "title": "We create",
+          "authentiques": "authentic",
+          "rotatingWords": ["stories", "identities", "websites", "strategies"],
+          "ctaButton": "Learn more"
+        },
+        "creative": {
+          "words": {
+            "creativity": "Creativity",
+            "strategy": "Strategy",
+            "innovation": "Innovation"
+          },
+          "subtitle": "This is what we implement to enhance your identity"
+        },
+        "technology": {
+          "title": "Technology and creativity",
+          "subtitle": "The tools that support our expertise",
+          "tools": [
+            { "id": "ai", "name": "Illustrator" },
+            { "id": "ps", "name": "Photoshop" },
+            { "id": "id", "name": "InDesign" },
+            { "id": "pr", "name": "Premiere Pro" },
+            { "id": "js", "name": "JavaScript" },
+            { "id": "react", "name": "React" },
+            { "id": "wp", "name": "WordPress" }
+          ]
+        },
+        "expertise": {
+          "title": "Dive deeper into our expertise",
+          "subtitle": "Discover the different areas we offer to build your story",
+          "cards": [
+            {
+              "title": "WordPress Website",
+              "link": "#wordpress"
+            },
+            {
+              "title": "E-commerce Website",
+              "link": "#ecommerce"
+            },
+            {
+              "title": "Visual Identity",
+              "link": "#identite"
+            }
+          ]
+        },
+        "testimonials": {
+          "cases": [
+            {
+              "id": 1,
+              "title": "Laforge Arnaud",
+              "description": "\"Manon delivers quality work, carried out with care and precision. Everything makes sense in her proposals. I highly recommend.\"",
+              "color": "#2B3990"
+            },
+            {
+              "id": 2,
+              "title": "Dubois Christian",
+              "description": "\"Manon is an excellent professional who listens to her clients. Perfect response to needs. Impeccable work quality. Speed and precision in execution.\"",
+              "color": "#E5A397"
+            },
+            {
+              "id": 3,
+              "title": "Martin Adeline",
+              "description": "Manon is brilliant! She can be proud of her work, because I am.",
+              "color": "#4A7B3F"
+            }
+          ]
+        }
+      }
+    },
+    "sections": {
+      "sectionOne": {
+        "title": "Section 1 Title",
+        "description": "Description for Section 1"
+      },
+      "sectionTwo": {
+        "title": "Section 2 Title",
+        "description": "Description for Section 2"
+      },
+      "sectionThree": {
+        "title": "Section 3 Title",
+        "description": "Description for Section 3"
+      },
+      "sectionFour": {
+        "title": "Section 4 Title",
+        "description": "Description for Section 4"
+      },
+      "sectionFive": {
+        "title": "Section 5 Title",
+        "description": "Description for Section 5"
+      }
+    },
+    "header": {
+      "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "contact": "Contact"
+      }
+    },
+    "footer": {
+      "brand": {
+        "tagline": "Creative communication studio"
+      },
+      "about": {
+        "title": "ABOUT",
+        "concept": "Concept",
+        "whoWeAre": "Who we are",
+        "faq": "FAQ",
+        "jobs": "Job offers",
+        "internships": "Internship offers"
+      },
+      "meetUs": {
+        "title": "MEET US",
+        "recruiters": "Recruiters",
+        "blog": "Blog",
+        "jobs": "Jobs",
+        "contact": "Contact"
+      },
+      "newsletter": {
+        "title": "THE NEWSLETTER THAT GETS THE JOB DONE",
+        "description": "Twice a week, stories, jobs and advice in your inbox.",
+        "placeholder": "Email",
+        "button": "Subscribe!",
+        "disclaimer": "You can unsubscribe at any time. We won't take it personally, promise. To learn more about our data protection policy,",
+        "privacyLink": "click here"
+      },
+      "legal": {
+        "mentions": "Legal notice",
+        "terms": "Terms of use",
+        "privacy": "Privacy policy"
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import blogData from '../data/blogData.json';
 import FeaturedPost from '../components/_FeaturedPost';
 import CategoryFilter from '../components/_CategoryFilter';
 import BlogPostList from '../components/_BlogPostList';
+import Footer from '../components/_Footer';
 
 const BlogPage = () => {
   const [posts, setPosts] = useState([]);
@@ -24,6 +25,7 @@ const BlogPage = () => {
   };
 
   return (
+    <>
     <div className="blog-page">
       <div className="blog-page__inner">
         <h1>Actualités et Conseils Créatifs</h1>
@@ -37,6 +39,8 @@ const BlogPage = () => {
         <BlogPostList posts={filteredPosts} />
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 
