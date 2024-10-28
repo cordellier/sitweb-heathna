@@ -20,129 +20,14 @@
       ]
     },
     {
-      "title": "POUR QUI ?",
-      "contentTitle": "Vous êtes... et vous avez...",
-      "content": [
-        {
-          "emoji": "💼",
-          "subtitle": "Prestataires de services",
-          "text": "Coachs, entrepreneurs, artisans, freelancers, commerçants, ONG, etc... vous n'avez pas encore de site ou votre site actuel"
-        },
-        {
-          "emoji": "🤔",
-          "subtitle": "Doutes sur la nécessité d'un site",
-          "text": "Pensez-vous que vous pouvez vous en passer, surtout avec votre compte Instagram à disposition ?"
-        },
-        {
-          "emoji": "⌛",
-          "subtitle": "Obstacles à la création de site",
-          "text": "Vous êtes confronté à des difficultés techniques, à un budget serré ou à un manque de temps pour créer ou refondre votre site."
-        },
-        {
-          "emoji": "😩",
-          "subtitle": "Conséquences des hésitations",
-          "text": "Ces doutes peuvent prolonger vos frustrations et freiner le développement de votre activité."
-        },
-        {
-          "emoji": "😤",
-          "subtitle": "Essais infructueux",
-          "text": "Avez-vous déjà essayé de créer votre site vous-même, mais vous êtes retrouvé frustré par les outils disponibles ?"
-        }
-      ]
-    },
-    {
-      "title": "AVANT / APRÈS",
-      "contentTitle": "Un thème à votre image rapidement !",
-      "content": "Galerie d'exemples avant/après..."
-    },
-    {
-      "title": "LE SERVICE",
-      "contentTitle": "Ce que comprend l'offre.",
-      "content": [
-        {
-          "subtitle": "Workbook interactif (ou Google Form)",
-          "text": "Un guide pratique pour vous aider à structurer vos textes et à créer un site efficace."
-        },
-        {
-          "subtitle": "Espace Drive dédié",
-          "text": "Un espace sécurisé pour déposer tous les éléments nécessaires à la construction de votre site."
-        },
-        {
-          "subtitle": "Personnalisation complète du template",
-          "text": "Ajustement des couleurs, images, polices et structure, avec possibilité de déplacer, dupliquer ou retirer des sections."
-        },
-        {
-          "subtitle": "Création d'un site de 8 pages",
-          "text": "Comprend toutes les pages nécessaires (hors pages de vente), avec mise en place du blog, une page « liens » pour Instagram et des pages légales pour garantir la conformité."
-        },
-        {
-          "subtitle": "Ajout des contenus",
-          "text": "Intégration de vos textes, images, outils d'emailing, Calendly, et formulaires, pour un site opérationnel."
-        },
-        {
-          "subtitle": "Choix du template",
-          "text": "Sélectionnez le template qui correspond le mieux à votre identité"
-        },
-        {
-          "subtitle": "Responsive design",
-          "text": "Un site adapté aux versions ordinateur, tablette et mobile, garantissant une expérience utilisateur optimale."
-        },
-        {
-          "subtitle": "Liaison du nom de domaine",
-          "text": "Assistance pour acheter et lier votre nom de domaine et installation de WordPress si nécessaire."
-        },
-        {
-          "subtitle": "Optimisation SEO basique",
-          "text": "Recommandations de mots-clés et structure pour améliorer votre visibilité sur Google."
-        },
-        {
-          "subtitle": "Modification",
-          "text": "Un aller-retour de modifications inclus"
-        },
-        {
-          "icon": "✓",
-          "subtitle": "Création d'un e-mail professionnel (offert 1 mois)*",
-          "text": "Mise en place d'une adresse e-mail personnalisée, comme contact@monsite.fr, pour renforcer votre crédibilité."
-        },
-        {
-          "subtitle": "Hébergement (offert 1 mois)*",
-          "text": "Profitez d'un hébergement de votre site pendant une durée d'un"
-        }
-      ]
-    },
-    {
-      "title": "COMMENT ÇA SE PASSE ?",
-      "contentTitle": "Comment ça fonctionne ?",
-      "content": [
-        {
-          "emoji": "🎨",
-          "subtitle": "Choisissez votre thème",
-          "text": "Découvrez notre sélection de templates, choisissez le votre. Nous vous conseillons de ne pas vous concentrer sur l'aspect visuel (puisque tout est modifiable) mais plutôt sur l'agencement et la présentation des éléments. Une fois choisi, réservez un appel afin que nous puissions faire le point et s'assurer que l'offre et le modèle de site vous corresponde avant de sauter le pas."
-        },
-        {
-          "emoji": "💻",
-          "subtitle": "Création du site",
-          "text": "Selon la date choisie, du lundi au vendredi nous créons votre site en nous inspirant du thème choisi. Durant cette semaine vous devez être assez disponible pour répondre à nos messages et valider les pages une par une."
-        },
-        {
-          "emoji": "📋",
-          "subtitle": "Aide à la préparation",
-          "text": "Une fois l'acompte versé nous créons un espace Drive dans lequel vous déposerez vos textes, vos images et votre identité visuelle. Pas de panique ! Nous vous guidons pas à pas grâce à un workbook et des vidéos d'explication, que nous vous fournirons."
-        },
-        {
-          "emoji": "🚀",
-          "subtitle": "Lancement de votre site et gain en lisibilité !",
-          "text": "Votre site est terminé ! Prenez place sur Google, montrez-le à votre communauté grâce aux templates de post que nous vous offrons. Puis regardez les clients venir à vous. Votre site devient votre machine à succès et un vrai outil stratégique au service de votre business."
-        }
-      ]
-    },
-    {
       "title": "TARIFS",
       "contentTitle": "Tarifs et suppléments.",
-      "pricingOptions": [
-        {
+      "pricingOptions": {
+        "mainOffer": {
           "title": "PAIEMENT UNIQUE",
-          "price": "1650€",
+          "startingFrom": "À PARTIR DE",
+          "originalPrice": "1650€",
+          "discountedPrice": "1450€",
           "features": [
             "Template du site",
             "Personnalisation et création",
@@ -151,38 +36,31 @@
             "Email Professionnel (offert 1 mois)*",
             "Maintenance (offerte 1 mois)*",
             "Hébergement (offert 1 mois)*"
+          ],
+          "note": "*Abonnement requis après la période.",
+          "buttonText": "NOUS CONTACTER"
+        },
+        "webManagement": {
+          "title": "GESTION WEB*",
+          "startingFrom": "À PARTIR DE",
+          "price": "59,99€",
+          "period": "/mois",
+          "features": [
+            "Mises à jour régulières",
+            "Sauvegardes régulières",
+            "Optimisation des performances",
+            "Email Professionnel",
+            "Hébergement"
           ]
         },
-        {
-          "title": "PAIEMENT EN 2 OU 3X",
-          "price": "570€",
-          "priceNote": "X3",
-          "features": [
-            "Template du site",
-            "Personnalisation et création",
-            "Responsive Design",
-            "Optimisation SEO",
-            "Email Professionnel (offert 1 mois)*",
-            "Maintenance (offerte 1 mois)*",
-            "Hébergement (offert 1 mois)*"
+        "additionalOptions": {
+          "title": "OPTIONS SUPPLÉMENTAIRES",
+          "options": [
+            "+ Page supplémentaire : 100€ par page",
+            "+ Ajout d'un blog avec intégration des 3 premiers articles : 200€",
+            "+ Ajout d'un portfolio avec intégration des 3 premiers projets : 200€"
           ]
         }
-      ],
-      "supplements": {
-        "title": "GESTION WEB*",
-        "price": "59,99€/mois",
-        "features": [
-          "Mises à jour régulières",
-          "Sauvegardes régulières",
-          "Optimisation des performances",
-          "Email Professionnel",
-          "Hébergement"
-        ],
-        "additionalOptions": [
-          "Page supplémentaire : 100€ par page",
-          "Ajout d'un blog avec intégration des 3 premiers articles : 200€",
-          "Ajout d'un portfolio avec intégration des 3 premiers projets : 200€"
-        ]
       }
     }
   ]

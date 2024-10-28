@@ -13,6 +13,9 @@ const useDropdownNavigation = () => {
     } else if (item.title === "Site Vitrine en 1 Semaine") {
       navigate("/custom-website");
       closeDropdown();
+    } else if (item.title === "Site Durable en 1 semaine") {  // Ajout de cette condition
+      navigate("/site-express");
+      closeDropdown();
     } else {
       console.log("Scrolling to section:", item.title);
       const sectionId = item.title.replace(/\s+/g, "-").toLowerCase();

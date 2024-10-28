@@ -1,109 +1,132 @@
-.pricing-options {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+.pricing-section {
 
-    .pricing-card {
-        background-color: $color-neutral-black;
-        border-radius: $border-radius;
-        padding: 20px;
-        width: calc(33.333% - 20px);
+    .pricing-title {
+        text-align: center;
+        font-size: $h1-size;
+        color: $color-accent-1;
+        margin-bottom: 40px;
+    }
+
+    .pricing-options {
         display: flex;
-        flex-direction: column;
-        position: relative;
         justify-content: center;
-        box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
 
-        &.best-option {
-            background-color: $color-accent-1;
-        }
-
-        .best-option-label {
-            position: absolute;
-            top: -20px;
-            right: 25%;
-            background-color: $color-accent-utility;
-            color: $color-neutral-black;
-            padding: 5px 10px;
+        .pricing-card {
+            background-color: $color-neutral-black;
             border-radius: $border-radius;
-            font-size: $small-size-2;
-            font-weight: bold;
-        }
+            padding: 30px;
+            width: 100%;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.4);
+            position: relative;
 
-        h3 {
-            font-family: $font-primary;
-            letter-spacing: 1px;
-            font-size: $body-size;
-            color: $color-neutral-white;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-family: $font-primary;
-            font-size: $h2-size;
-            color: $secondary-color;
-            margin-bottom: 20px;
-
-            .price-note {
+            .special-offer {
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $color-accent-utility;
+                color: $color-neutral-black;
+                padding: 8px 20px;
+                border-radius: $border-radius;
+                font-weight: bold;
                 font-size: $small-size;
-                vertical-align: super;
             }
-        }
 
-        .features {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 20px;
-            color: $color-neutral-white;
+            h3 {
+                font-family: $font-primary;
+                letter-spacing: 1px;
+                font-size: $body-size;
+                color: $color-neutral-white;
+                text-align: center;
+                margin-top: 15px;
+            }
 
-            li {
-                margin-bottom: 10px;
-                font-family: $font-secondary;
-                font-size: $small-size;
+            .price-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                margin-bottom: 5px;
 
-                &.included:before {
-                    content: '✓';
-                    color: $color-neutral-white;
-                    margin-right: 5px;
-                }
-
-                &.not-included {
+                .original-price {
+                    font-family: $font-primary;
+                    font-size: 28px;
                     color: $color-neutral-gray;
                     text-decoration: line-through;
+                }
 
-                    &:before {
-                        content: '✗';
-                        color: $secondary-color;
-                        margin-right: 5px;
+                .discounted-price {
+                    font-family: $font-primary;
+                    font-size: $h2-size;
+                    color: $secondary-color;
+                }
+            }
+
+            .features {
+                list-style-type: none;
+                padding: 0;
+
+                li {
+                    margin-bottom: 5px;
+                    font-family: $font-secondary;
+                    font-size: $small-size;
+                    color: $color-neutral-white;
+
+                    &.included:before {
+                        content: '✓';
+                        color: $color-accent-1;
+                        margin-right: 10px;
+                    }
+
+                    &.not-included {
+                        color: $color-neutral-gray;
+                        text-decoration: line-through;
+
+                        &:before {
+                            content: '✗';
+                            color: $secondary-color;
+                            margin-right: 10px;
+                        }
                     }
                 }
             }
-        }
 
-        .choose-option {
-            background-color: $secondary-color;
-            color: $color-neutral-white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: $border-radius;
-            font-family: $font-secondary;
-            font-size: $small-size;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            .choose-option {
+                background-color: $secondary-color;
+                color: $color-neutral-white;
+                border: none;
+                padding: 15px 20px;
+                border-radius: $border-radius;
+                font-family: $font-secondary;
+                font-size: $body-size;
+                cursor: pointer;
+                transition: transform 0.3s ease;
+                text-align: center;
+                margin-top: auto;
 
-            &:hover {
-                transform: scale(1.05);
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
 }
 
 @media (max-width: $tablet) {
-    .pricing-options {
-        flex-direction: column;
+    .pricing-section {
+        .pricing-options {
+            flex-direction: column;
+            align-items: center;
 
-        .pricing-card {
-            width: 100%;
+            .pricing-card {
+                max-width: 100%;
+            }
         }
     }
 }

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import InfosTemplate from "../components/TemplatePage/_InfosTemplate";
+import InfosTemplate from "../components/TemplateOnWeek/_InfosTemplateOneWeek";
 import Footer from "../components/_Footer";
-import TemplateDetailsPopup from "../components/TemplatePage/_DetailsTemplate";
+import TemplateDetailsPopup from "../components/TemplateOnWeek/_DetailsTemplateOneWeek";
 import templateDetailsOneWeek from "../data/templateDetailsOneWeek.json";
 
 const OneWeekTemplate = () => {

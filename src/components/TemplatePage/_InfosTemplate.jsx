@@ -22,7 +22,7 @@ const InfosTemplate = () => {
   return (
     <>
       {isOpen && <div className="dark-overlay" onClick={toggleOpen}></div>}
-      <div className={`infos-template ${isOpen ? 'open' : ''} ${shouldBounce && !isOpen ? 'bounce' : ''}`}>
+      <div className={`infos-template-template ${isOpen ? 'open' : ''} ${shouldBounce && !isOpen ? 'bounce' : ''}`}>
         <div className="tab" onClick={toggleOpen}>
           <ChevronRight size={24} />
           <span>Infos</span>

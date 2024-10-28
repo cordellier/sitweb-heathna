@@ -1,0 +1,215 @@
+.pricing-section-template {
+  padding: $section-padding;
+  width: 100%;
+  margin-top: -30px;
+
+  .pricing-title {
+    font-family: $font-primary;
+    font-size: 60px;
+    color: $secondary-color;
+    text-align: center;
+    margin-bottom: $section-padding * 3;
+  }
+
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $section-padding * 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .main-card {
+      background-color: $color-neutral-black;
+      border-radius: $border-radius;
+      padding: $section-padding * 1.5;
+      position: relative;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+      .special-offer {
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-accent-utility;
+        color: $color-neutral-black;
+        padding: 8px 24px;
+        border-radius: $border-radius;
+        font-family: $font-secondary;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        white-space: nowrap;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .price-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin: 15px 0;
+
+        .original-price {
+          font-family: $font-primary;
+          font-size: 28px;
+          color: $color-neutral-gray;
+          text-decoration: line-through;
+        }
+
+        .discounted-price {
+          font-family: $font-primary;
+          font-size: $h2-size;
+          color: $secondary-color;
+        }
+      }
+
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+
+        li {
+          font-family: $font-secondary;
+          font-size: 15px;
+          color: $color-neutral-white;
+          margin-bottom: 5px;
+          padding-left: 25px;
+          position: relative;
+
+          &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: $color-accent-1;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .subscription-note {
+        font-family: $font-secondary;
+        font-size: 13px;
+        color: $color-neutral-gray;
+        margin: 5px 0;
+        font-style: italic;
+      }
+
+      .contact-button {
+        width: 100%;
+        background-color: $secondary-color;
+        color: $color-neutral-white;
+        border: none;
+        border-radius: $border-radius;
+        padding: 12px;
+        font-family: $font-secondary;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        margin-top: 5px;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+
+    .web-management-card,
+    .additional-options-card {
+      background-color: $color-neutral-white;
+      border-radius: $border-radius;
+      padding: $section-padding * 1.5;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      height: fit-content;
+      margin-top: 12.5%;
+
+      h3 {
+        font-family: $font-secondary;
+        font-size: 16px;
+        color: $color-neutral-black;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+    }
+
+    .web-management-card {
+      .starting-from {
+        font-family: $font-secondary;
+        font-size: 14px;
+        color: $secondary-color;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .price-container {
+        margin-bottom: 20px;
+
+        .price {
+          font-family: $font-primary;
+          font-size: $h3-size;
+          color: $secondary-color;
+        }
+
+        .period {
+          font-family: $font-primary;
+          font-size: $small-size;
+          color: $secondary-color;
+        }
+      }
+
+      .features {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-family: $font-secondary;
+          font-size: 15px;
+          color: $color-neutral-black;
+          margin-bottom: 5px;
+          padding-left: 25px;
+          position: relative;
+
+          &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: $color-accent-1;
+          }
+        }
+      }
+    }
+
+    .additional-options-card {
+      .options-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-family: $font-secondary;
+          font-size: 14px;
+          color: $color-neutral-black;
+          margin-bottom: 15px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .pricing-section-template {
+    padding: $section-padding;
+
+    .pricing-title {
+      font-size: 40px;
+      margin-bottom: $section-padding * 2;
+    }
+
+    .pricing-cards {
+      grid-template-columns: 1fr;
+      gap: $section-padding;
+    }
+  }
+}

@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect, useRef } from 'react';
-import PricingOptions from '../TemplatePage/_PricingOption';
-import FormationModuleGrid from '../TemplatePage/_FormationModule';
+import PricingOptionsOneWeek from './_PricingOptionOneWeek';
 
 const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,8 +18,8 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
 
   const renderContent = () => {
     const tab = tabs[activeTab];
-    if (activeTab === tabs.length - 1) {
-      return <PricingOptions options={tab.pricingOptions} />;
+    if (activeTab === 1) { // Index de l'onglet TARIFS
+      return <PricingOptionsOneWeek data={tab} />; // Utilisez le bon nom du composant
     } else if (activeTab === 0) {
       return (
         <ul className="included-pages-list">
@@ -29,10 +28,10 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
           ))}
         </ul>
       );
-    } else if (activeTab === 1 || activeTab === 3) {
+    } else if (activeTab === 2 || activeTab === 3) {
       if (Array.isArray(tab.content)) {
         return (
-          <div className={activeTab === 1 ? 'personalisable-content' : 'offer-content'}>
+          <div className={activeTab === 2 ? 'personalisable-content' : 'offer-content'}>
             {tab.content.map((item, index) => (
               <div key={index} className="content-item">
                 {item.subtitle && (
@@ -44,7 +43,7 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
                 <p>{item.text}</p>
               </div>
             ))}
-            {activeTab === 1 && (
+            {activeTab === 2 && (
               <div className="personalisable-footer">
                 Vous bénéficierez d&apos;une grande liberté dans la personnalisation pour créer un site qui reflète parfaitement votre identité et qui attire efficacement votre clientèle cible. Laissez libre cours à votre créativité !
               </div>
@@ -52,8 +51,6 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
           </div>
         );
       }
-    } else if (activeTab === 4) {
-      return <FormationModuleGrid modules={tab.modules} />;
     }
     return <div dangerouslySetInnerHTML={{ __html: tab.content }} />;
   };
@@ -78,9 +75,7 @@ const TemplateDetailsPopup = ({ isOpen, onClose, template, openPosition }) => {
           </nav>
           <div className="tab-content">
             <h2 className="content-title">{tabs[activeTab].contentTitle}</h2>
-            <div className="content-area">
-              {renderContent()}
-            </div>
+            <div className="content-area">{renderContent()}</div>
           </div>
         </div>
       </div>
@@ -97,8 +92,7 @@ TemplateDetailsPopup.propTypes = {
         title: PropTypes.string,
         contentTitle: PropTypes.string,
         content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-        pricingOptions: PropTypes.array,
-        modules: PropTypes.array
+        pricingOptions: PropTypes.object
       })
     ).isRequired
   }).isRequired,

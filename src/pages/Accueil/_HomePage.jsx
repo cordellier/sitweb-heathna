@@ -1,6 +1,5 @@
-// src/components/HomePage.js
+// src/pages/Accueil/_HomePage.jsx
 import { useRef } from 'react';
-import { useTranslation } from 'react-i18next'; 
 import SectionUn from './_Section1';
 import SectionDeux from './_Section2';
 import SectionTrois from './_Section3';
@@ -11,15 +10,14 @@ import useParticles from '../../Hooks/useParticles';
 
 const HomePage = () => {
   const { svgRef } = useParticles();
-  const { t } = useTranslation(); 
 
   return (
     <>
       <div className="home-page">
         <div className="content" ref={useRef(null)}>
-          <span>{t('data.homePage.title')}</span> 
-          <p>{t('data.homePage.subtitle')}</p> 
-          <span>{t('data.homePage.name')}</span> 
+          <span>Studio</span>
+          <p>de communication créative</p>
+          <span>Haethna</span>
         </div>
         <svg width="100%" height="100%" id="svg" ref={svgRef}></svg>
       </div>
