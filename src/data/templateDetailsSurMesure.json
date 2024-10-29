@@ -1,0 +1,45 @@
+{
+  "pricingOptions": {
+    "mainOffer": {
+      "title": "PAIEMENT UNIQUE",
+      "tag": "OFFRES SPÉCIALES !",
+      "startingFrom": "À PARTIR DE",
+      "originalPrice": "2800€",
+      "discountedPrice": "2500€",
+      "features": [
+        "Création des maquettes web",
+        "Intégration des maquettes",
+        "Responsive Design",
+        "Optimisation SEO",
+        "Email Professionnel (offert 1 mois)*",
+        "Maintenance (offerte 1 mois)*",
+        "Hébergement (offert 1 mois)*"
+      ],
+      "note": "*Abonnement requis après la période.",
+      "buttonText": "NOUS CONTACTER"
+    },
+    "webManagement": {
+      "title": "GESTION WEB*",
+      "startingFrom": "À PARTIR DE",
+      "price": "59,99€",
+      "period": "/mois",
+      "features": [
+        "Mises à jour régulières",
+        "Sauvegardes régulières",
+        "Optimisation des performances",
+        "Email Professionnel",
+        "Hébergement"
+      ]
+    },
+    "additionalOptions": {
+      "title": "OPTIONS SUPPLÉMENTAIRES",
+      "options": [
+        "+ Ajout de pages supplémentaires",
+        "+ Création d'illustrations personnalisées pour présenter vos services",
+        "+ Ajout d'un blog avec intégration des premiers articles",
+        "+ Ajout d'un portfolio avec intégration des premiers projets",
+        "+ Ajout d'une boutique en ligne avec ajout des produits à vendre"
+      ]
+    }
+  }
+}

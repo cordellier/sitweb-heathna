@@ -21,14 +21,14 @@ const InfosTemplate = () => {
 
   return (
     <>
-      {isOpen && <div className="dark-overlay" onClick={toggleOpen}></div>}
-      <div className={`infos-template ${isOpen ? 'open' : ''} ${shouldBounce && !isOpen ? 'bounce' : ''}`}>
-        <div className="tab" onClick={toggleOpen}>
+      {isOpen && <div className="overlay-dark" onClick={toggleOpen}></div>}
+      <div className={`template-info ${isOpen ? 'is-open' : ''} ${shouldBounce && !isOpen ? 'bounce-animation' : ''}`}>
+        <div className="tab-button" onClick={toggleOpen}>
           <ChevronRight size={24} />
           <span>Infos</span>
         </div>
-        <div className="content">
-          <div className="video-wrapper">
+        <div className="content-area">
+          <div className="video-container">
             <button className="play-button">
               <div className="play-icon"></div>
             </button>

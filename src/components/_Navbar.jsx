@@ -36,7 +36,6 @@ function Navbar() {
               </li>
               <li><Link to="/clients">Clients</Link></li>
               <li><Link to="/culture">Culture</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
               <li><a href="#" onClick={handleContactClick} className="navbar__cta">CONTACTER NOUS</a></li>
             </ul>
           </div>

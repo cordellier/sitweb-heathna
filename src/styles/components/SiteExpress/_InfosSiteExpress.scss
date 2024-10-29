@@ -9,7 +9,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.template-info {
+.info-template {
   position: fixed;
   right: -450px;
   top: 52%;
@@ -22,15 +22,15 @@
   z-index: 1000;
   border-radius: 10px 0 0 10px;
 
-  &.is-open {
+  &.open {
     right: 0;
   }
 
-  &.bounce-animation {
+  &.bounce {
     animation: bounce 0.5s ease-in-out;
   }
 
-  .tab-button {
+  .info-tab {
     position: absolute;
     left: -50px;
     top: 20%;
@@ -58,12 +58,12 @@
     }
   }
 
-  .content-area {
+  .info-content {
     padding: 20px;
     height: 100%;
     overflow-y: auto;
 
-    .video-container {
+    .video-box {
       position: relative;
       margin-left: 5%;
       margin-top: 15px;
@@ -72,7 +72,7 @@
       background: url('/chemin-vers-votre-image.jpg') center/cover;
       border-radius: 10px;
       margin-bottom: 30px;
-      border: 6px solid $secondary-color;
+      border: 6px solid $color-accent-1;
       overflow: hidden;
 
       .play-button {
@@ -82,7 +82,7 @@
         transform: translate(-50%, -50%);
         width: 60px;
         height: 60px;
-        background-color: $secondary-color;
+        background-color: $color-accent-1;
         border: none;
         border-radius: 50%;
         cursor: pointer;
@@ -109,7 +109,7 @@
       font-size: 12px;
 
       li {
-        margin-bottom: 25px;
+        margin-bottom: 15px;
         padding-left: 25px;
         position: relative;
 

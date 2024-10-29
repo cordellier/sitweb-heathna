@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import InfosTemplate from "../components/TemplateOnWeek/_InfosTemplateOneWeek";
 import Footer from "../components/_Footer";
 import TemplateDetailsPopup from "../components/TemplateOnWeek/_DetailsTemplateOneWeek";
+import ThemeSelector from "../components/TemplateOnWeek/_ThemeSelector"; // Ajout de l'import
 import templateDetailsOneWeek from "../data/templateDetailsOneWeek.json";
 
 const OneWeekTemplate = () => {
@@ -9,6 +10,7 @@ const OneWeekTemplate = () => {
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
+  const [isThemeSelectorOpen, setIsThemeSelectorOpen] = useState(false); // Nouvel état
   const [openPosition, setOpenPosition] = useState(null);
 
   useEffect(() => {
@@ -31,6 +33,11 @@ const OneWeekTemplate = () => {
     setIsDetailsOpen(true);
   };
 
+  const handleThemeClick = (event) => { // Nouveau handler
+    setOpenPosition({ x: event.clientX, y: event.clientY });
+    setIsThemeSelectorOpen(true);
+  };
+
   return (
     <>
       <div className={`site-en-1-semaine ${isVisible ? "is-visible" : ""}`}>
@@ -51,7 +58,7 @@ const OneWeekTemplate = () => {
               <button className="savoir-plus" onClick={handleSavoirPlusClick}>
                 SAVOIR +
               </button>
-              <button className="choisir-theme">
+              <button className="choisir-theme" onClick={handleThemeClick}>
                 CHOISIR MON THÈME
               </button>
             </div>
@@ -151,6 +158,12 @@ const OneWeekTemplate = () => {
         isOpen={isDetailsOpen}
         onClose={() => setIsDetailsOpen(false)}
         template={templateDetailsOneWeek}
+        openPosition={openPosition}
+      />
+
+      <ThemeSelector 
+        isOpen={isThemeSelectorOpen}
+        onClose={() => setIsThemeSelectorOpen(false)}
         openPosition={openPosition}
       />
       

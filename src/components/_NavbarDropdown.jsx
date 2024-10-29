@@ -1,14 +1,38 @@
-// src/components/NavbarDropdown.js
+// src/components/_NavbarDropdown.jsx
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types'; // Ajout des PropTypes
+import { useNavigate } from 'react-router-dom'; // Ajout de useNavigate
 import dropdownData from '../data/dropdownData.json';
 import useActiveSection from '../hooks/useActiveSection';
 import useDropdownNavigation from '../hooks/useDropdownNavigation';
 import { NAVBAR_DROPDOWN_ANIMATION, DROPDOWN_CONTENT_ANIMATION } from '../constants/animationSettings';
 
-const NavbarDropdown = () => {
+const NavbarDropdown = ({ onClose }) => { // Ajout de la prop onClose
   const { activeSection, handleMouseEnter } = useActiveSection();
   const { handleItemClick } = useDropdownNavigation();
+  const navigate = useNavigate();
   const { sections, content } = dropdownData;
+
+  const handleItemNavigation = (item) => {
+    const routeMap = {
+      "Site Sur-Mesure": "/site-sur-mesure",
+      "Site Vitrine en 1 Semaine": "/custom-website",
+      "Site Durable en 1 semaine": "/site-express",
+      "Template CMS avec formation": "/template-cms",
+      "Site Web Durable Sur-Mesure": "/site-durable-mesure",
+      "Brandboard": "/brandboard",
+      "Charte Graphique": "/charte-graphique",
+      "Carte de Visite": "/carte-visite",
+      "Flyer - Dépliant": "/flyer-depliant"
+    };
+
+    const route = routeMap[item.title];
+    if (route) {
+      navigate(route);
+      if (onClose) onClose(); // Ferme la dropdown après navigation
+    }
+    handleItemClick(item); // Garde la fonction existante pour d'autres fonctionnalités
+  };
 
   return (
     <motion.div
@@ -44,7 +68,7 @@ const NavbarDropdown = () => {
                 <div
                   key={itemIndex}
                   className="content-item"
-                  onClick={() => handleItemClick(item)}
+                  onClick={() => handleItemNavigation(item)}
                 >
                   <div className="icon">
                     <img src={item.icon} alt={`${item.title} Icon`} />
@@ -61,6 +85,10 @@ const NavbarDropdown = () => {
       </motion.div>
     </motion.div>
   );
+};
+
+NavbarDropdown.propTypes = {
+  onClose: PropTypes.func
 };
 
 export default NavbarDropdown;

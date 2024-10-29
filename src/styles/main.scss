@@ -14,7 +14,6 @@
 
 // Pages
 @import './pages/ContactForm';
-@import './pages/BlogPage';
 @import './pages/ClientsPage';
 @import './pages/TemplateSelectionPage';
 @import './pages/OneWeekTemplate';
@@ -42,6 +41,13 @@
 // Components One Week
 @import './components/TemplateOnWeek/InfosTemplateOneWeek';
 @import './components/TemplateOnWeek/PricingOptionOneWeek';
-
+@import './components/TemplateOnWeek/ThemeSelector';
+// Components Site Sur Mesure
+@import './components/SiteSurMesureCms/InfosSiteSurMesureCms';
+@import './components/SiteSurMesureCms/PricingOptionsSiteSurMesureCms';
+@import './components/SiteSurMesureCms/DetailsTemplateSiteSurMesureCms';
+// Components Site Express
+@import './components/SiteExpress/InfosSiteExpress';
+@import './components/SiteExpress/PricingOptionSiteExpress';
 
 // Utilities

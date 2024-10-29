@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import BesoinAide from "../components/Aide/_BesoinAide";
 import Footer from "../components/_Footer";
-import InfosTemplate from "../components/TemplatePage/_InfosTemplate";
+import InfosTemplate from "../components//SiteExpress/_InfosSiteExpress";
 import TemplateDetailsPopup from "../components/TemplatePage/_DetailsTemplate";
 
 const SiteExpress = () => {

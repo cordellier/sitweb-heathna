@@ -28,27 +28,26 @@ const InfosTemplate = () => {
           <span>Infos</span>
         </div>
         <div className="content">
-          <h2>Découvrez notre offre complète</h2>
           <ul>
             <li>
-              <h4>Design sur-mesure</h4>
-              <p>Élaboration et intégration de maquettes personnalisées.</p>
+              <h4>Personnalisation complète du template choisi</h4>
+              <p>Ajustement des couleurs, images, polices et structure selon vos besoins.</p>
             </li>
             <li>
-              <h4>Contenus intégrés</h4>
-              <p>Ajout de vos textes, images, formulaires et pages légales (mentions légales, politique de confidentialité).</p>
+              <h4>Création d'un site de 8 pages</h4>
+              <p>Comprend toutes les pages nécessaires (hors pages de vente), avec mise en place du blog, une page « liens » pour Instagram et des pages légales pour garantir la conformité.</p>
             </li>
             <li>
-              <h4>Outils spécifiques</h4>
-              <p>Intégration d'outils comme newsletters, calendriers, ou podcasts selon vos besoins.</p>
+              <h4>Contenus intégrés et outils spécifiques</h4>
+              <p>Intégration de vos textes, images, outils de rdv, podcasts et formulaires, selon vos besoins.</p>
             </li>
             <li>
               <h4>Responsive & SEO</h4>
-              <p>Un design adapté à tous les écrans et une optimisation SEO basique pour améliorer votre visibilité.</p>
+              <p>Un design adapté à tous les écrans et une optimisation SEO de base pour améliorer votre visibilité.</p>
             </li>
             <li>
               <h4>E-mail & hébergement offerts</h4>
-              <p>Un e-mail pro et l'hébergement gratuit pendant 1 mois.</p>
+              <p>Un e-mail professionnel et l'hébergement gratuit pendant 1 mois.</p>
             </li>
           </ul>
         </div>

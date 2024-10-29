@@ -1,4 +1,4 @@
-.overlay-dark {
+.dark-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,28 +9,28 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.template-info {
+.infos-template {
   position: fixed;
   right: -450px;
   top: 52%;
   transform: translateY(-50%);
   width: 450px;
-  height: 780px;
+  height: 600px;
   background-color: #fff;
   box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease-in-out;
   z-index: 1000;
   border-radius: 10px 0 0 10px;
 
-  &.is-open {
+  &.open {
     right: 0;
   }
 
-  &.bounce-animation {
+  &.bounce {
     animation: bounce 0.5s ease-in-out;
   }
 
-  .tab-button {
+  .tab {
     position: absolute;
     left: -50px;
     top: 20%;
@@ -58,15 +58,15 @@
     }
   }
 
-  .content-area {
+  .content {
     padding: 20px;
     height: 100%;
     overflow-y: auto;
 
-    .video-container {
+    .video-wrapper {
       position: relative;
       margin-left: 5%;
-      margin-top: 15px;
+      margin-top: 20px;
       width: 90%;
       height: 200px;
       background: url('/chemin-vers-votre-image.jpg') center/cover;
@@ -107,6 +107,7 @@
       padding-left: 0;
       margin-bottom: 20px;
       font-size: 12px;
+      margin-top: 50px;
 
       li {
         margin-bottom: 25px;
